@@ -1,0 +1,16 @@
+apply plugin: 'java'
+group "$upload_group"
+version "$upload_version"
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation gradleApi()
+    compileOnly "com.android.tools.build:gradle:$gradle_version"
+    implementation "com.bytedance.android.byteX:common:${bytex_version}"
+    implementation "com.bytedance.android.byteX:PluginConfigProcessor:${bytex_version}"
+    annotationProcessor "com.bytedance.android.byteX:PluginConfigProcessor:${bytex_version}"
+}
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"
+apply from: rootProject.file('gradle/publish.gradle')

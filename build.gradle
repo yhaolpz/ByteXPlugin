@@ -1,0 +1,48 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    apply from: rootProject.file('gradle/ext.gradle')
+    repositories {
+        mavenLocal()
+        maven {
+            url uri('./gradle_plugins')
+        }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        google()
+        jcenter()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$gradle_version"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+        classpath 'com.novoda:bintray-release:0.8.0'
+        classpath "org.jetbrains.dokka:dokka-gradle-plugin:0.10.0"
+        classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.3"
+        classpath "digital.wup:android-maven-publish:3.6.3"
+
+        classpath "com.bytedance.android.byteX:base-plugin:${bytex_version}"
+        classpath "com.wyh.plugin:trace-plugin:${plugin_version}"
+    }
+}
+
+allprojects {
+    repositories {
+        mavenLocal()
+        maven {
+            url uri('./gradle_plugins')
+        }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        google()
+        jcenter()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
