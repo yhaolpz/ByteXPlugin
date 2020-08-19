@@ -2,15 +2,19 @@ package com.wyh.plugin.trace;
 
 import com.ss.android.ugc.bytex.common.BaseExtension;
 
+/**
+ * todo DSL 方式配置，支持追踪无法编码的三方 lib 类
+ */
 public class TraceExtension extends BaseExtension {
-    private boolean deleteLineNumber;
 
-    public boolean isDeleteLineNumber() {
-        return deleteLineNumber;
+    private String defaultMethodTraceClass;
+
+    public String defaultMethodTraceClass() {
+        return defaultMethodTraceClass;
     }
 
-    public void setDeleteLineNumber(boolean deleteLineNumber) {
-        this.deleteLineNumber = deleteLineNumber;
+    public void defaultMethodTraceClass(String defaultMethodTraceClass) {
+        this.defaultMethodTraceClass = defaultMethodTraceClass;
     }
 
     @Override

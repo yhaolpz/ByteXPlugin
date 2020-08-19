@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 // apply ByteX宿主
-//apply plugin: 'bytex'
-//ByteX {
-//    enable true
-//    enableInDebug false
-//    logLevel "DEBUG"
-//}
+apply plugin: 'bytex'
+ByteX {
+    enable true
+    enableInDebug false
+    logLevel "DEBUG"
+}
 
 apply plugin: 'trace-plugin'
 TracePlugin{

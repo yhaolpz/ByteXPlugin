@@ -10,6 +10,9 @@ import com.wyh.trace.lib.TraceMethod;
 @TraceClass
 public class MainActivity extends AppCompatActivity {
 
+    /**
+     * 不追踪此方法，但是追踪其内部调用的所有方法，
+     */
     @TraceMethod(trace = false, traceInnerMethod = true)
     @Override
     protected void onCreate(Bundle savedInstanceState) {

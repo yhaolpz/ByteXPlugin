@@ -1,13 +1,15 @@
 package com.my.asmsystraceplugin;
 
 import com.wyh.trace.lib.TraceClass;
+import com.wyh.trace.lib.TraceMethod;
 
 /**
  * @author WangYingHao
  */
-@TraceClass(methodTrace = CustomTimeTrace.class, traceAllMethod = true)
+@TraceClass(methodTrace = CustomTimeTrace.class, traceAllMethod = false, traceInnerMethod = false)
 class Test {
 
+    @TraceMethod(trace = true, traceInnerMethod = true)
     public static void test() {
         test1();
         test2();
