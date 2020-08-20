@@ -10,11 +10,11 @@ def UPLOAD_MAVEN_URL_SNAPSHOT = properties.getProperty('UPLOAD_MAVEN_URL_SNAPSHO
 def USERNAME_SNAPSHOT = properties.getProperty('USERNAME_SNAPSHOT', "")
 def PASSWORD_SNAPSHOT = properties.getProperty('PASSWORD_SNAPSHOT', "")
 def BINTRAY_KEY = properties.getProperty('BINTRAY_KEY', "")
+
 def uploadToMaven = false
 def uploadToJCenter = false
 def useSnapshotMaven = false
 try {
-    properties.load(project.rootProject.file('upload.properties').newDataInputStream())
     uploadToMaven = properties.getProperty('upload2Maven')
     uploadToJCenter = properties.getProperty('upload2JCenter')
     useSnapshotMaven = properties.getProperty('useSnapshotMaven')
@@ -40,6 +40,7 @@ ext {
     bintray_key = BINTRAY_KEY
 }
 println("upload2Maven:$upload2Maven")
+println("upload2JCenter:$upload2JCenter")
 println("useSnapshot:$useSnapshot")
 println("upload_user_name:$upload_user_name")
 println("upload_password:$upload_password")
