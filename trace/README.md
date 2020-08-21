@@ -5,7 +5,7 @@
 
 很简单，仅 @TraceClass、@TraceMethod 两个注解，搞懂这俩就行了
 
-##### @TraceClass 为类注解，表示要追踪此类中的方法，可配置 3 个属性：
+#### @TraceClass 为类注解，表示要追踪此类中的方法，可配置 3 个属性：
 
 ```
 @Retention(RetentionPolicy.CLASS)
@@ -29,7 +29,7 @@ public @interface TraceClass {
 }
 ```
 
-##### @TraceMethod 为方法注解，可配置 2 个属性：
+#### @TraceMethod 为方法注解，可配置 2 个属性：
 
 ```
 @Retention(RetentionPolicy.CLASS)
@@ -71,18 +71,23 @@ public class Test{
 ```
 
 - 若要追踪类中 m1() 的耗时
+
 Test 添加类注解 @TraceClass；m1() 方法添加注解 @TraceMethod
 
 - 若要追踪类中所有方法，即 m1()、m2()、m3() 的耗时
+
 Test 添加类注解 @TraceClass(traceAllMethod = true)
 
 - 若要追踪类中所有方法但不包括 m1()，即 m2()、m3() 的耗时
+
 Test 添加类注解 @TraceClass(traceAllMethod = true)；m1() 方法添加注解 @TraceMethod(trace = false)
 
 - 若要追踪 m1() 方法内部调用到的方法，即 m2()、m3()、OtherClass.m4()、OtherClass.m5() 的耗时
+
 Test 类添加注解 @TraceClass；m1() 方法添加注解 @TraceMethod(trace = false,traceInnerMethod = true)
 
 - 若要使用自定义的追踪插桩处理追踪 m1() 方法
+
 继承自 IMethodTrace 方法实现自己的插桩处理，例如 CustomSysTrace；
 Test 添加类注解 @TraceClass(methodTrace = CustomSysTrace.class)；m1() 方法添加注解 @TraceMethod
 
