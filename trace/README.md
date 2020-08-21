@@ -1,5 +1,6 @@
 ## trace-plugin 方法插桩插件
 
+>简洁、优雅、易用、功能强大
 
 ### 使用姿势
 
@@ -37,7 +38,7 @@ public class Test{
 }
 ```
 
-- 追踪 m1() 耗时：
+追踪 m1() 耗时：
 
 ```java
 @TraceClass
@@ -46,14 +47,14 @@ public class Test{
     public static void m1() {...
 ```
 
-- 追踪类中所有方法耗时：
+追踪类中所有方法耗时：
 
 ```java
 @TraceClass(traceAllMethod = true)
 public class Test{...}
 ```
 
-- 追踪类中所有方法耗时，但不包括 m1()：
+追踪类中所有方法耗时，但不包括 m1()：
 
 ```java
 @TraceClass(traceAllMethod = true)
@@ -62,7 +63,7 @@ public class Test{
     public static void m1() {...
 ```
 
-- 若要追踪 m1() 方法内部调用到的方法，即 m2()、OtherClass.m4() 的耗时
+若要追踪 m1() 方法内部调用到的方法，即 m2()、OtherClass.m4() 的耗时
 
 ```java
 @TraceClass
@@ -71,7 +72,7 @@ public class Test{
     public static void m1() {...
 ```
 
-- 自定义追踪插桩处理
+自定义追踪插桩处理
 
 ```java
 //继承自 IMethodTrace 方法实现自己的插桩处理，例如 systrace 追踪处理：
