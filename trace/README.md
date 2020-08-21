@@ -20,7 +20,9 @@
     boolean traceInnerMethod() default false; //是否要追踪方法内部调用到的方法
 ```
 
-举个例子，Test 类中有 m1()、m2()、m3() 三个方法：
+### 举个例子
+
+Test 类中有 m1()、m2()、m3() 三个方法：
 
 ```java
 public class Test{
@@ -35,7 +37,7 @@ public class Test{
 }
 ```
 
-- 1.追踪 m1() 耗时：
+- 追踪 m1() 耗时：
 
 ```java
 @TraceClass
@@ -44,14 +46,14 @@ public class Test{
     public static void m1() {...
 ```
 
-- 2.追踪类中所有方法耗时：
+- 追踪类中所有方法耗时：
 
 ```java
 @TraceClass(traceAllMethod = true)
 public class Test{...}
 ```
 
-- 3.追踪类中所有方法耗时，但不包括 m1()：
+- 追踪类中所有方法耗时，但不包括 m1()：
 
 ```java
 @TraceClass(traceAllMethod = true)
@@ -60,7 +62,7 @@ public class Test{
     public static void m1() {...
 ```
 
-- 4.若要追踪 m1() 方法内部调用到的方法，即 m2()、OtherClass.m4() 的耗时
+- 若要追踪 m1() 方法内部调用到的方法，即 m2()、OtherClass.m4() 的耗时
 
 ```java
 @TraceClass
@@ -69,7 +71,7 @@ public class Test{
     public static void m1() {...
 ```
 
-- 5.自定义追踪插桩处理
+- 自定义追踪插桩处理
 
 ```java
 //继承自 IMethodTrace 方法实现自己的插桩处理，例如 systrace 追踪处理：
@@ -91,7 +93,7 @@ public class Test{...}
 
 ### 集成接入
 
-- 配置工程 gradle
+配置工程 gradle：
 
 ```
 buildscript {
@@ -111,7 +113,7 @@ buildscript {
 }
 ```
 
-- 配置应用 gradle
+配置应用 gradle：
 
 ```
 apply plugin: 'bytex'
