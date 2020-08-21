@@ -51,7 +51,7 @@ public class Test{
 
 ```java
 @TraceClass(traceAllMethod = true)
-public class Test{...}
+public class Test{...
 ```
 
 追踪类中所有方法耗时，但不包括 m1()：
@@ -63,13 +63,17 @@ public class Test{
     public static void m1() {...
 ```
 
-若要追踪 m1() 方法内部调用到的方法，即 m2()、OtherClass.m4() 的耗时
+追踪 m1() 方法内部调用到的方法，即 m2()、OtherClass.m4() 的耗时
 
 ```java
 @TraceClass
 public class Test{
     @TraceMethod(trace = false,traceInnerMethod = true)
-    public static void m1() {...
+    public static void m1() {
+        m2();
+        OtherClass.m4();
+    }
+    ...
 ```
 
 自定义追踪插桩处理
