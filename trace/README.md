@@ -1,3 +1,5 @@
+[![](https://jitpack.io/v/yhaolpz/ByteXPlugin.svg)](https://jitpack.io/#yhaolpz/ByteXPlugin)
+
 ## trace-plugin 方法插桩插件
 
 >简洁、优雅、易用、功能强大
