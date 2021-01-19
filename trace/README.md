@@ -103,17 +103,17 @@ public class Test{...}
 ```
 buildscript {
     ext {
-        bytexPluginVersion = "0.1.8" //插件版本
+        bytexPluginVersion = "0.1.8" //基于的 bytex 插件版本
+        tracePluginVersion = "1.3" //trace 插件版本
     }
     repositories {
         ...
-        //插件地址
-        jcenter()
-        maven { url "https://raw.githubusercontent.com/yhaolpz/ByteXPlugin/release/gradle_plugins" }
+        jcenter() //bytex 插件地址
+        maven { url 'https://jitpack.io' } //trace 插件地址
     }
     dependencies {
         classpath "com.bytedance.android.byteX:base-plugin:$bytexPluginVersion"
-        classpath "com.wyh.plugin:trace-plugin:$bytexPluginVersion"
+        classpath "com.github.yhaolpz.ByteXPlugin:trace-plugin:$tracePluginVersion"
     }
 }
 ```
@@ -137,7 +137,7 @@ TracePlugin{
 
 dependencies {
     ...
-    //依赖注解库
-    implementation "com.wyh.plugin:trace-lib:${bytexPluginVersion}"
+    //依赖 trace 注解库
+    implementation "com.github.yhaolpz.ByteXPlugin:trace-lib:${tracePluginVersion}"
 }
 ```
