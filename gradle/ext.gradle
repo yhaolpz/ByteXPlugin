@@ -14,9 +14,11 @@ def BINTRAY_KEY = properties.getProperty('BINTRAY_KEY', "")
 def uploadToMaven = false
 def uploadToJCenter = false
 def useSnapshotMaven = false
+def uploadToJitPack = false
 try {
     uploadToMaven = properties.getProperty('upload2Maven')
     uploadToJCenter = properties.getProperty('upload2JCenter')
+    uploadToJitPack = properties.getProperty('upload2JitPack')
     useSnapshotMaven = properties.getProperty('useSnapshotMaven')
 } catch (e) {
 }
@@ -27,6 +29,7 @@ ext {
 
     upload2Maven = uploadToMaven
     upload2JCenter = uploadToJCenter
+    upload2JitPack = uploadToJitPack
     useSnapshot = useSnapshotMaven
     upload_user_name = USERNAME
     upload_password = PASSWORD
@@ -42,6 +45,7 @@ ext {
 }
 println("upload2Maven:$upload2Maven")
 println("upload2JCenter:$upload2JCenter")
+println("upload2JitPack:$upload2JitPack")
 println("useSnapshot:$useSnapshot")
 println("upload_user_name:$upload_user_name")
 println("upload_password:$upload_password")
