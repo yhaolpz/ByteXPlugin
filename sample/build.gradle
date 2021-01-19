@@ -8,12 +8,12 @@ ByteX {
     logLevel "DEBUG"
 }
 
-//apply plugin: 'trace-plugin'
-//TracePlugin{
-//    enable true
-//    enableInDebug true
-//    logLevel "DEBUG"
-//}
+apply plugin: 'trace-plugin'
+TracePlugin{
+    enable true
+    enableInDebug true
+    logLevel "DEBUG"
+}
 
 
 android {
@@ -42,8 +42,8 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation project(path: ':trace-lib')
-//    implementation 'com.wyh.plugin:trace-lib:1.0.0'
+//    implementation project(path: ':trace-lib')
+    implementation 'com.github.yhaolpz.ByteXPlugin:trace-lib:1.3'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
