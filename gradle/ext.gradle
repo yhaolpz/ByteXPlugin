@@ -35,7 +35,7 @@ ext {
     upload_password_snapshot = PASSWORD_SNAPSHOT
     upload_maven_url_snapshot = UPLOAD_MAVEN_URL_SNAPSHOT
     upload_group = 'com.wyh.plugin'
-    upload_version = "1.0.0${(useSnapshotMaven.toBoolean() ? "-${doSh("git config user.name")}-SNAPSHOT" : "")}"
+//    upload_version = "1.0.0${(useSnapshotMaven.toBoolean() ? "-${doSh("git config user.name")}-SNAPSHOT" : "")}"
     upload_version = bytex_version //与 byteX 版本保持一致
     upload_dir = project.rootProject.file('gradle_plugins').path
     bintray_key = BINTRAY_KEY

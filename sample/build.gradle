@@ -8,12 +8,12 @@ ByteX {
     logLevel "DEBUG"
 }
 
-apply plugin: 'trace-plugin'
-TracePlugin{
-    enable true
-    enableInDebug true
-    logLevel "DEBUG"
-}
+//apply plugin: 'trace-plugin'
+//TracePlugin{
+//    enable true
+//    enableInDebug true
+//    logLevel "DEBUG"
+//}
 
 
 android {
