@@ -4,8 +4,6 @@ import android.os.SystemClock;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.wyh.trace.lib.IMethodTrace;
-
 import java.util.HashMap;
 
 /**

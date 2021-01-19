@@ -76,5 +76,15 @@
       <option name="name" value="maven4" />
       <option name="url" value="https://raw.githubusercontent.com/yhaolpz/ByteXPlugin/release/gradle_plugins" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven" />
+      <option name="name" value="maven" />
+      <option name="url" value="file:$PROJECT_DIR$/trace-plugin/gradle_plugins" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven" />
+      <option name="name" value="maven" />
+      <option name="url" value="file:$PROJECT_DIR$/trace-lib/gradle_plugins" />
+    </remote-repository>
   </component>
 </project>

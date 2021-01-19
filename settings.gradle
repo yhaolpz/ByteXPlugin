@@ -1,7 +1,7 @@
 include ':trace-lib'
 include ':trace-plugin'
-project(':trace-plugin').projectDir = new File('trace/trace-plugin')
-project(':trace-lib').projectDir = new File('trace/trace-lib')
+//project(':trace-plugin').projectDir = new File('trace/trace-plugin')
+//project(':trace-lib').projectDir = new File('trace/trace-lib')
 
 include ':sample'
 rootProject.name = "ByteXPlugin"

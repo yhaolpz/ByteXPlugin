@@ -12,8 +12,8 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/sample" />
-            <option value="$PROJECT_DIR$/trace/trace-lib" />
-            <option value="$PROJECT_DIR$/trace/trace-plugin" />
+            <option value="$PROJECT_DIR$/trace-lib" />
+            <option value="$PROJECT_DIR$/trace-plugin" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
